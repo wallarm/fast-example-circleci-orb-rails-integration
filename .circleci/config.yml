@@ -1,0 +1,19 @@
+version: 2.1
+orbs:
+  fast: wallarm/fast@1.0.0
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run application
+          command: |
+            docker run -d --name app-test -p 3000:3000 wallarm/fast-example-rails
+
+      - fast/run_security_tests:
+          app_port: "3000"
+          test_record_id: "3334" # use your test_record_id
