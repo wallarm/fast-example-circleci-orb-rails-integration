@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  fast: wallarm/fast@1.0.0
+  fast: wallarm/fast@1.1.0
 jobs:
   build:
     machine:
@@ -16,4 +16,4 @@ jobs:
 
       - fast/run_security_tests:
           app_port: "3000"
-          test_record_id: "3334" # use your test_record_id
+          test_record_id: "3334" # use your test_record_id!
