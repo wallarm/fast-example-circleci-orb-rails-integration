@@ -12,8 +12,10 @@ All build results: https://circleci.com/gh/wallarm/fast-example-circleci-orb-rai
 1. Create your FAST node and get `WALLARM_API_TOKEN` here https://us1.my.wallarm.com/nodes
 2. Fork this repository
 3. Add project into Circle CI (first build will fail without `WALLARM_API_TOKEN`)
-4. Add env-variable `WALLARM_API_TOKEN` in the project settings 
-5. Rerun build. It will find some vulnerabilities
+4. Add env-variable `WALLARM_API_TOKEN` in the project settings
+5. Make a test_record: https://docs.fast.wallarm.com/en/poc/ci-mode-recording.html
+6. Add your test_record_id into `.circleci/config.yml`
+7. Rerun build. It will find some vulnerabilities
 
 ## Useful links
 
